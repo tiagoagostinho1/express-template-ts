@@ -18,33 +18,41 @@ A minimalist and scalable template for building REST APIs using Express.js and T
 ## Getting Started
 
 1. Clone this template:
-git clone <repository-url>
-cd express-typescript-api
-
+   ```sh
+   git clone <repository-url>
+   cd express-typescript-api
+   ```
 2. Install dependencies:
-   bash
-npm install
-or
-yarn install
-
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
 3. Create a `.env` file in the root directory:
-env
-PORT=8000
-
+   ```sh
+   PORT=8000
+   ```
 4. Start the development server:
-bash
-npm run dev
-or
-yarn dev
-
+   ```sh
+   npm run dev
+   ```
+   or
+   ```sh
+   yarn dev
+   ```
 
 ## Project Structure
+
+```
 ├── src/
-│ ├── index.ts # Application entry point
-│ └── user.ts # Example route handler
-├── .env # Environment variables
+│   ├── index.ts    # Application entry point
+│   └── user.ts     # Example route handler
+├── .env            # Environment variables
 ├── package.json
 └── tsconfig.json
+```
 
 ## Available Scripts
 
@@ -59,16 +67,21 @@ yarn dev
 3. Import and add the route to `index.ts`
 
 Example:
-typescript
+
+```typescript
 // src/newRoute.ts
 import { Request, Response } from "express";
+
 export const handleNewRoute = (req: Request, res: Response) => {
-// Your logic here
+    // Your logic here
 };
+```
+
+```typescript
 // In index.ts
 import { handleNewRoute } from "./newRoute";
 app.get("/new-route", handleNewRoute);
-
+```
 
 ## Environment Variables
 
@@ -92,3 +105,4 @@ Feel free to submit issues and enhancement requests.
 ## License
 
 [MIT](LICENSE)
+
